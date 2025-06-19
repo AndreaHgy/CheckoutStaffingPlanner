@@ -35,9 +35,4 @@ public class EmployeeService {
     public List<Employee> findAllEmployees() {
         return employeeRepository.findAll();
     }
-
-    public void deleteEmployeeByNameAndPassword(String name, String password) {
-        Employee employee = findEmployeeByNameAndPassword(name, password);
-        employeeRepository.delete(employee);
-    }
 }
