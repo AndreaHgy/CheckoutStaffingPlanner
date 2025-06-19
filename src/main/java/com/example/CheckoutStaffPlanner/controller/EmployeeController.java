@@ -35,12 +35,4 @@ public class EmployeeController {
         Employee newEmployee = employeeService.addEmployee(employee);
         return new ResponseEntity<>(newEmployee, HttpStatus.CREATED);
     }
-
-    @DeleteMapping("/delete/{name}/{password}")
-    public ResponseEntity<?> deleteEmployeeById(@PathVariable("name") String name, @PathVariable("password") String password){
-        employeeService.deleteEmployeeByNameAndPassword(name, password);
-        return new ResponseEntity<>(HttpStatus.OK);
-    }
-
-
 }
