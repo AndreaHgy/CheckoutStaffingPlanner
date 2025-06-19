@@ -94,10 +94,6 @@ public class ScheduleService {
         return scheduleRepo.findSchedulesByDate(date);
 
     }
-
-    public void deleteScheduleByDateAndShift(LocalDate date, ShiftType shift){
-        scheduleRepo.deleteScheduleByDateAndShift(date, shift);
-    }
 }
 
 
