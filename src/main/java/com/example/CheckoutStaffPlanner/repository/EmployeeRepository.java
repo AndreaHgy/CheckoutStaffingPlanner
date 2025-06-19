@@ -12,7 +12,4 @@ public interface EmployeeRepository extends JpaRepository<Employee, Long> {
     Optional<Employee> findEmployeeByNameAndPassword(String name, String password);
 
     Optional<Employee> findEmployeeById(Long id);
-
-    @Query("DELETE ROW FROM employee_wishbooks WHERE employee_id = employee.id")
-    void delete(Employee employee);
 }
