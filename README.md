@@ -25,7 +25,7 @@ OR
 &ensp; "password": "admin"  
 }**
 
-Create as many users as needed. You can see all the employees added by sending the following GET request: http://localhost:8080/employee/all.
+Create as many users as needed. You can see all the employees added by sending the following GET request: http://localhost:8080/employee/all or a specific user by name and password: http://localhost:8080/employee/find/{name}/{password}.
 
 
 **<span style="color: red;">!!! It is mandatory for each user to have a name, a password and to be assigned if it's an admin or not
@@ -55,15 +55,9 @@ Example with the users above:
 https://localhost:8080/schedule/add/2/Andrea/testing/2025-07-21/EARLY
 
 I set the adminId to 2 because I added only two users with my examples and my admin user would take the second id, but it can depend on how many employees are created and in which order.  
-**<span style="color: red;">!!! If the adminId does not belong to an admin user, the application will throw an exception. Same procedure applies if it is tried to add an admin to a wishlist/schedule or if a schedule date does not coincide with any wishbook dates. </span>**    
+**<span style="color: red;">!!! If the adminId does not belong to an admin user, the application will throw an exception. Same procedure applies if it is tried to add an admin to a wishlist/schedule or if a schedule date does not coincide with any wishbook dates. </span>**   
+
 To find a specific schedule by date, execute the following command: https://localhost:8080/schedule/find/{date}
-
-
-
-If there is a need to delete an employee, a wishbook or a schedule, there are also the commands:  
-- http://localhost:8080/employee/delete/{name}/{password}
-- http://localhost:8080/wishbook/delete/{date}/{shift}  
-- http://localhost:8080/schedule/delete/{date}/{shift}
 
 
 
