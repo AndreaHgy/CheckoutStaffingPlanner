@@ -35,12 +35,4 @@ public class ScheduleController {
         List<Schedule> schedules = scheduleService.getScheduleByDate(date);
         return new ResponseEntity<>(schedules, HttpStatus.OK);
     }
-
-    @DeleteMapping("/delete/{date}/{shift}")
-    public ResponseEntity<?> deleteSchedule(@PathVariable("date") LocalDate date, @PathVariable("shift") ShiftType shift){
-        scheduleService.deleteScheduleByDateAndShift(date, shift);
-        return new ResponseEntity<>(HttpStatus.OK);
-    }
-
-
 }
