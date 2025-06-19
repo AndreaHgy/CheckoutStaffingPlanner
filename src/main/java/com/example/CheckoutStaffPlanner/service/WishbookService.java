@@ -29,10 +29,6 @@ public class WishbookService {
         return wishbookRepo.save(wishbook);
     }
 
-    public void deleteWishbookByDateAndShift(LocalDate date, ShiftType shift){
-        wishbookRepo.deleteWishbookByDateAndShift(date, shift);
-    }
-
     public Wishbook addEmployeeToWishbook(String name, String password, LocalDate date, ShiftType shift){
         Wishbook wishbook = wishbookRepo.findWishbookByDateAndShift(date, shift);
         Employee employee = employeeService.findEmployeeByNameAndPassword(name, password);
