@@ -9,5 +9,4 @@ import java.util.List;
 public interface WishbookRepo extends JpaRepository<Wishbook, Long> {
     Wishbook findWishbookByDateAndShift(LocalDate date, ShiftType shift);
     List<Wishbook> findWishbooksByDate(LocalDate date);
-    void deleteWishbookByDateAndShift(LocalDate date, ShiftType shift);
 }
