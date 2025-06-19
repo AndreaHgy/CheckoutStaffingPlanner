@@ -32,10 +32,4 @@ public class WishbookController {
         Wishbook newWishbook = wishbookService.addWishbook(wishbook);
         return new ResponseEntity<>(newWishbook, HttpStatus.CREATED);
     }
-
-    @DeleteMapping("delete/{date}/{shift}")
-    public ResponseEntity<?> deleteWishbook(@PathVariable("date") LocalDate date, @PathVariable("shift") ShiftType shift){
-        wishbookService.deleteWishbookByDateAndShift(date, shift);
-        return new ResponseEntity<>(HttpStatus.OK);
-    }
 }
