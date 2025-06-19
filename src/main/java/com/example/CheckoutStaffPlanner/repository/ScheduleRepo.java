@@ -10,6 +10,4 @@ import java.util.List;
 public interface ScheduleRepo extends JpaRepository<Schedule, Long> {
 
     List<Schedule> findSchedulesByDate(LocalDate date);
-    void deleteScheduleByDateAndShift(LocalDate date, ShiftType shift);
-
 }
