@@ -26,10 +26,4 @@ public class WishbookController {
         Wishbook wishbook = wishbookService.addEmployeeToWishbook(name, password, date, shift);
         return new ResponseEntity<>(wishbook, HttpStatus.CREATED);
     }
-
-    @PostMapping("/addWishbook")
-    public ResponseEntity<Wishbook> addWishBook(Wishbook wishbook){
-        Wishbook newWishbook = wishbookService.addWishbook(wishbook);
-        return new ResponseEntity<>(newWishbook, HttpStatus.CREATED);
-    }
 }
